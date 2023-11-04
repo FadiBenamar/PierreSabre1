@@ -3,7 +3,7 @@ package personnages;
 public class Humain {
 	private String nom;
 	private String boisson;
-	private int argent;
+	protected int argent;
 
 	public Humain(String nom, String boisson, int argent) {
 		super();
@@ -52,5 +52,4 @@ public class Humain {
 			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peux même pas m'offrir un " + prix + " sous");
 		}
 	}
-
 }
