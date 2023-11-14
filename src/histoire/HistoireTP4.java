@@ -21,7 +21,7 @@ public class HistoireTP4 {
 		marco.recevoir(5);
 		marco.boire();
 
-		Yakuza yaku = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong", 4);
+		Yakuza yaku = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong", 0);
 		yaku.boire();
 		yaku.extorquer(marco);
 
