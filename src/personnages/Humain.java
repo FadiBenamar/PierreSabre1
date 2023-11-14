@@ -72,19 +72,21 @@ public class Humain {
 			memoire[nbConnaissance]=humain;
 			nbConnaissance++;
 		}else {
-			for (int i = 0; i < nbConnaissance-1; i++) {
-				memoire[i]=memoire[i+1];
+			for (int i = 0; i < nbConnaissance; i++) {
+				memoire[i] = memoire[i + 1];
 			}
-			memoire[nbConnaissance-1]=humain;
+			memoire[nbConnaissance - 1] = humain;
 		}
 	}
 	
 	public void listerConnaissance() {
 		parler("Je connais beaucoup de monde dont :");
+		StringBuilder listeNoms = new StringBuilder();
 		for (int i = 0; i < nbConnaissance-1; i++) {
-			parler(memoire[i].getNom()+",");
+			listeNoms.append(memoire[i].getNom()).append(", ");
 		}
-		parler(memoire[nbConnaissance-1].getNom()+".");
+		listeNoms.append(memoire[nbConnaissance - 1].getNom());
+		parler(listeNoms.toString() + ".");
 		
 	}
 }
